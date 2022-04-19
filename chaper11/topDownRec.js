@@ -29,3 +29,15 @@ function reverse(string) {
 
 let argReverse = 'abcde'
 console.log(reverse(argReverse))
+
+function countingX(string) {
+  if (string.length === 0) return 0
+  if (string[0] === 'x') {
+    return 1 + countingX(string.slice(1, string.length))
+  } else {
+    return countingX(string.slice(1, string.length))
+  }
+}
+let argCountX = 'axbxcx'
+// Expected result: 3
+console.log(countingX(argCountX))
