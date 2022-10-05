@@ -41,3 +41,15 @@ function countingX(string) {
 let argCountX = 'axbxcx'
 // Expected result: 3
 console.log(countingX(argCountX))
+
+/**
+ * Staircase
+ */
+
+function numberOfPath(n) {
+  if (n < 0) { return 0 }
+  if (n === 1 || n === 0 ) { return 1 }
+  return numberOfPath(n - 1) + numberOfPath(n - 2) + numberOfPath(n - 3)
+}
+
+console.log(numberOfPath(10))
